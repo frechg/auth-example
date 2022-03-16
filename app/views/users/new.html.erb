@@ -1,0 +1,11 @@
+<h1>Become an Authenticator</h1>
+
+<%= form_with model: @user, method: :post do |form| %>
+  <%= form.label :email, "Enter your email" %>
+  <%= form.text_field :email %>
+  <%= form.label :password, "Set a password" %>
+  <%= form.password_field :password %>
+  <%= form.label :password_confirmation, "Confirm password" %>
+  <%= form.password_field :password_confirmation %>
+  <%= form.submit "Join" %>
+<% end %>
