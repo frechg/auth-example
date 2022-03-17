@@ -1,6 +1,6 @@
 <h1>Authenticator</h1>
 <% if current_user %>
-  <%= link_to "Logout", "/logout", method: :delete %>
+  <%= link_to "Logout", "/logout" %>
 <% else %>
   <%= link_to "Join", "/join" %>
   <%= link_to "Authenticate", "/authenticate" %>

@@ -1,9 +1,9 @@
-<h1>Authenticate</h1>
+<h1>Become Authenticated</h1>
 
 <%= form_with model: @user, url: '/authenticate', method: :post do |form| %>
   <%= form.label :email, "Email" %>
   <%= form.text_field :email %>
-  <%= form.label :password, "Email" %>
+  <%= form.label :password, "Password" %>
   <%= form.password_field :password %>
   <%= form.submit "Authenticate" %>
 <% end %>

@@ -30,7 +30,7 @@ RSpec.describe "User authentication", type: :system do
     visit "/"
     click_link "Authenticate"
 
-    expect(page).to have_text "Authenticate"
+    expect(page).to have_text "Become Authenticated"
 
     fill_in 'user[email]', with: user.email
     fill_in 'user[password]', with: user.password
@@ -52,6 +52,6 @@ RSpec.describe "User authentication", type: :system do
     click_link "Logout"
 
     expect(page).to have_link "Join", href: "/join"
-    expect(page).to not_have_link "Logout", href: "/logout"
+    expect(page).to have_no_link "Logout", href: "/logout"
   end
 end

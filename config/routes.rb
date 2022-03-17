@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   get '/authenticate', to: 'sessions#new'
   post '/authenticate', to: 'sessions#create'
-  delete '/logout', to: 'sessions#delete'
+  get '/logout', to: 'sessions#destroy'
 
 end
