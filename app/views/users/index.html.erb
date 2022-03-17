@@ -1,12 +1,15 @@
 <div id="app-welcome">
-  <h1 class="page-title">the Authenticated</h1>
-  <p id="enter">
-    <% if current_user %>
+  <% if current_user %>
+    <h1 class="page-title">- You are Authenticated -</h1>
+    <p id="enter">
       <%= link_to "Logout", "/logout" %>
-    <% else %>
+    </p>
+  <% else %>
+    <h1 class="page-title">the Authenticated</h1>
+    <p id="enter">
       <%= link_to "Join", "/join" %>
       or
-      <%= link_to "Authenticate", "/authenticate" %>
-    <% end %>
-  </p>
+      <%= link_to "reAuth", "/authenticate" %>
+    </p>
+  <% end %>
 </div>
