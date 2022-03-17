@@ -4,16 +4,16 @@ RSpec.describe "User authentication", type: :system do
   scenario "User sees links to sign up and sign in" do
     visit '/'
 
-    expect(page).to have_text "Authenticator"
+    expect(page).to have_text "the Authenticated"
     expect(page).to have_link "Join", href: "/join"
-    expect(page).to have_link "Authenticate", href: "/authenticate"
+    expect(page).to have_link "reAuth", href: "/authenticate"
   end
 
   scenario "User signs up successfully" do
     visit '/'
     click_link "Join"
 
-    expect(page).to have_text "Become an Authenticator"
+    expect(page).to have_text "Join the Authenticated"
 
     fill_in 'user[email]', with: 'person@example.com'
     fill_in 'user[password]', with: 'testpass'
@@ -28,9 +28,9 @@ RSpec.describe "User authentication", type: :system do
     user = User.create(email: "person@example.com", password: "testpass")
 
     visit "/"
-    click_link "Authenticate"
+    click_link "reAuth"
 
-    expect(page).to have_text "Become Authenticated"
+    expect(page).to have_text "reAuthenticate"
 
     fill_in 'user[email]', with: user.email
     fill_in 'user[password]', with: user.password
@@ -44,7 +44,7 @@ RSpec.describe "User authentication", type: :system do
     user = User.create(email: "person@example.com", password: "testpass")
 
     visit "/"
-    click_link "Authenticate"
+    click_link "reAuth"
     fill_in 'user[email]', with: user.email
     fill_in 'user[password]', with: user.password
     click_button "Authenticate"
