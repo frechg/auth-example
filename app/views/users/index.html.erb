@@ -1,7 +1,12 @@
-<h1>Authenticator</h1>
-<% if current_user %>
-  <%= link_to "Logout", "/logout" %>
-<% else %>
-  <%= link_to "Join", "/join" %>
-  <%= link_to "Authenticate", "/authenticate" %>
-<% end %>
+<div id="app-welcome">
+  <h1 class="page-title">the Authenticated</h1>
+  <p id="enter">
+    <% if current_user %>
+      <%= link_to "Logout", "/logout" %>
+    <% else %>
+      <%= link_to "Join", "/join" %>
+      or
+      <%= link_to "Authenticate", "/authenticate" %>
+    <% end %>
+  </p>
+</div>

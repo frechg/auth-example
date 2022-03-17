@@ -1,0 +1,83 @@
+body {
+  background-color: red;
+}
+
+#app-container {
+  background-color: #fff;
+  border: 2px solid #000;
+  max-width: 40%;
+  margin: 10% auto;
+  padding: 36px;
+}
+
+#app-welcome {
+  text-align: center;
+  padding-bottom: 12px;
+
+  p#enter {
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: line-through;
+    letter-spacing: 3px;
+  }
+}
+
+h1.page-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.form-wrapper {
+  padding: 36px 0px 24px;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.form-field-wrapper {
+  margin-bottom: 24px;
+  text-align: center;
+    font-style: italic;
+
+  label {
+    color: #666;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+    text-decoration: line-through;
+    letter-spacing: 3px;
+  }
+
+  input {
+    text-align: center;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    display: block;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    height: 36px;
+    padding: 6px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type=submit] {
+    font-size: 16px;
+    font-style: italic;
+    font-family: serif;
+    text-transform: none;
+    text-decoration: line-through;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.form-submit-wrapper {
+  padding-top: 24px;
+}

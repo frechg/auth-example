@@ -1,9 +1,17 @@
-<h1>Become Authenticated</h1>
+<h1 class="page-title">Authenticate</h1>
 
-<%= form_with model: @user, url: '/authenticate', method: :post do |form| %>
-  <%= form.label :email, "Email" %>
-  <%= form.text_field :email %>
-  <%= form.label :password, "Password" %>
-  <%= form.password_field :password %>
-  <%= form.submit "Authenticate" %>
-<% end %>
+<section class="form-wrapper">
+  <%= form_with model: @user, url: '/authenticate', method: :post do |form| %>
+    <div class="form-field-wrapper">
+      <%= form.label :email, "Email" %>
+      <%= form.text_field :email %>
+    </div>
+    <div class="form-field-wrapper">
+      <%= form.label :password, "Password" %>
+      <%= form.password_field :password %>
+    </div>
+    <div class="form-field-wrapper form-submit-wrapper">
+      <%= form.submit "Authenticate" %>
+    </div>
+  <% end %>
+</section>
