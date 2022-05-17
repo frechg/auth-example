@@ -40,7 +40,6 @@ RSpec.describe "Sessions", type: :request do
       expect(response).to redirect_to("/")
       follow_redirect!
 
-      #expect(current_user).to be(nil)
       expect(response).to have_http_status(200)
       expect(response.body).to include("reAuth")
     end
